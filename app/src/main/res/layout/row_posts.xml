@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userPictureIv"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1" >
+                <TextView
+                    android:id="@+id/userNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/postTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="33 min"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/moreBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_more_black" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/postTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Title"
+            android:autoLink="all"/>
+        <TextView
+            android:id="@+id/postDescriptionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The description of the post"
+            android:textColor="@color/black"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:autoLink="all"/>
+
+        <ImageView
+            android:id="@+id/postImageIv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/white" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

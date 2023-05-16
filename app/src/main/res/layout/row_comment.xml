@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:padding="5dp">
+    <!-- profile image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileCommentIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_default_img" />
+    <!-- user name -->
+    <TextView
+        android:id="@+id/nameCommentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/profileCommentIv"
+        android:text="Person name"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="3dp"/>
+    <!-- Date time -->
+    <TextView
+        android:id="@+id/dateCommentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dd/MM/yyyy"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"
+        android:textColor="#918F8F"/>
+    <!-- comment -->
+    <TextView
+        android:id="@+id/commentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The comment of the post"
+        android:textColor="#7A7777"
+        android:layout_toEndOf="@id/profileCommentIv"
+        android:layout_below="@+id/nameCommentTv"/>
+</RelativeLayout>

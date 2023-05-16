@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.adminHomeDashBoard">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:background="@drawable/shape2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/baseline_double_arrow_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="90"
+                app:tint="@color/white" />
+            <TextView
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="FORUM APP - ADMIN PANEL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/baseline_double_arrow_24"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="90"
+                android:layout_marginRight="10dp"
+                app:tint="@color/white"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/navigateBtn"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#3F51B5"
+        android:layout_margin="10dp"
+        android:layout_width="150dp"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Home Page"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

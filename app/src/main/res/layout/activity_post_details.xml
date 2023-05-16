@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CDC9C9"
+    tools:context=".view.PostDetailsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <!-- Post title -->
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="The title of the post"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By " />
+                <TextView
+                    android:id="@+id/nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:hint="name"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/namePictureIv"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_default_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/postDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="date"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/postImageIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionTv"
+            android:hint="Description"
+            android:textColor="#F51C1C1C" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageUserIv"
+                android:layout_width="8dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_default_img" />
+
+                <EditText
+                    android:id="@+id/commentEt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:scrollbars="vertical"
+                    android:background="@drawable/shape_field_comment"
+                    android:hint="comment"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:ems="5"
+                    android:isScrollContainer="true"/>
+
+            <Button
+                android:id="@+id/addCommentBtn"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_add_comment_btn"
+                android:text="Add"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <!-- show comments -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#A8A7A7"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Comments:"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/commentsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_comment"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "896348089451",
+    "firebase_url": "https://team5-forum-app-default-rtdb.firebaseio.com",
+    "project_id": "team5-forum-app",
+    "storage_bucket": "team5-forum-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896348089451:android:40616b6998ce96be12952e",
+        "android_client_info": {
+          "package_name": "com.example.forumapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896348089451-p69ai549oiihmotg00gjl49ntjl277e6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.forumapp",
+            "certificate_hash": "b1e7cf9c5977a151dea102f08efd1d02f25ee270"
+          }
+        },
+        {
+          "client_id": "896348089451-qshpctkpjddhl30oldvtb3em21trvk0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDupIGHXNJQVUiqyVcA9z5eNBraVQQmc2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896348089451-qshpctkpjddhl30oldvtb3em21trvk0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
